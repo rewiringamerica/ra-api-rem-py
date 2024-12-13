@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "ra_rem"
-version = "0.1.8"
-description = "Python client stubs for the REM (Residential Electrification Model) API"
-authors = ["OpenAPI Generator Community <team@openapitools.org>"]
-license = "LICENSE.md"
+name = "rewiringamerica_rem"
+version = "0.3.0"
+description = "Residential Electrification Model API"
+authors = ["Rewiring America <datascience@rewiringamerica.org>"]
+license = "Apache 2.0"
 readme = "README.md"
-repository = "https://github.com/rewiringamerica/ra-api-rem-py"
-keywords = ["Rewiring America", "REM", "electrification", "utility", "energy", "emissions", "savings"]
-include = ["ra_rem/py.typed"]
+repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
+keywords = ["OpenAPI", "OpenAPI-Generator", "Residential Electrification Model API"]
+include = ["rewiringamerica_rem/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -36,7 +36,7 @@ extension-pkg-whitelist = "pydantic"
 
 [tool.mypy]
 files = [
-  "ra_rem",
+  "rewiringamerica_rem",
   #"test",  # auto-generated tests
   "tests", # hand-written tests
 ]
@@ -74,7 +74,7 @@ disallow_any_generics = true
 
 [[tool.mypy.overrides]]
 module = [
-  "ra_rem.configuration",
+  "rewiringamerica_rem.configuration",
 ]
 warn_unused_ignores = true
 strict_equality = true

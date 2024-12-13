@@ -1,19 +1,19 @@
 # RemProfileRequest
 
-A class representing the request body used to retrieve a building's profile.  Attributes ----------     upgrade: Building Upgrade     heating_fuel: Heating Fuel     building_profile: Building Profile
+A class representing the request body used to retrieve a building's profile.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**upgrade** | [**ValidUpgrade**](ValidUpgrade.md) |  | 
-**heating_fuel** | [**HeatingFuel**](HeatingFuel.md) |  | [optional] 
-**building_profile** | [**BuildingProfile**](BuildingProfile.md) |  | 
+**upgrade** | [**SupportedUpgrade**](SupportedUpgrade.md) | Building Upgrade | 
+**heating_fuel** | [**HeatingFuelInput**](HeatingFuelInput.md) | Heating Fuel | 
+**building_profile** | [**BuildingProfile**](BuildingProfile.md) | Building Profile | 
 
 ## Example
 
 ```python
-from ra_rem.models.rem_profile_request import RemProfileRequest
+from rewiringamerica_rem.models.rem_profile_request import RemProfileRequest
 
 # TODO update the JSON string below
 json = "{}"

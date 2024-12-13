@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ra_rem.models.http_validation_error import HTTPValidationError
+from rewiringamerica_rem.models.http_validation_error import HTTPValidationError
 
 # TODO update the JSON string below
 json = "{}"

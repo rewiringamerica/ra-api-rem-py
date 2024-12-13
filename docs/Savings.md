@@ -1,21 +1,19 @@
 # Savings
 
-A class to represent savings data.  Attributes ----------     baseline (Impact): The data if no upgrade is passed into the surrogate model.     upgrade (Impact): The data if an upgrade is passed into the surrogate model.     delta (Impact): The deltas if an upgrade is passed into the surrogate model.     rates (List[FuelData]): The cost/fuel unit rates for each fuel type.     emissions_factors (List[FuelData]): The kgCO2e/fuel unit rates for each fuel type.
+Represent the savings due to an upgrade.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**baseline** | [**Impact**](Impact.md) |  | 
-**upgrade** | [**Impact**](Impact.md) |  | 
-**delta** | [**Impact**](Impact.md) |  | 
-**rates** | [**List[FuelDataRates]**](FuelDataRates.md) |  | 
-**emissions_factors** | [**List[FuelData]**](FuelData.md) |  | 
+**fuel_results** | [**Dict[str, FuelSavings]**](FuelSavings.md) | A list of results, one for each fuel type. | 
+**rates** | **Dict[str, List[FuelRate]]** | A list of rates used to compute the cost of fuel consumed. | 
+**emissions_factors** | [**Dict[str, Quantity]**](Quantity.md) | A list of factors used to compute the the emissions from various fuels. | 
 
 ## Example
 
 ```python
-from ra_rem.models.savings import Savings
+from rewiringamerica_rem.models.savings import Savings
 
 # TODO update the JSON string below
 json = "{}"

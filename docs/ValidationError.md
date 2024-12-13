@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ra_rem.models.validation_error import ValidationError
+from rewiringamerica_rem.models.validation_error import ValidationError
 
 # TODO update the JSON string below
 json = "{}"

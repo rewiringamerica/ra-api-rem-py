@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ra_rem.models.validation_error_loc_inner import ValidationErrorLocInner
+from rewiringamerica_rem.models.validation_error_loc_inner import ValidationErrorLocInner
 
 # TODO update the JSON string below
 json = "{}"
