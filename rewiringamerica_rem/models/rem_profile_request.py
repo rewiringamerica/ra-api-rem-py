@@ -21,7 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
 from rewiringamerica_rem.models.building_profile import BuildingProfile
-from rewiringamerica_rem.models.heating_fuel_input import HeatingFuelInput
+from rewiringamerica_rem.models.heating_fuel import HeatingFuel
 from rewiringamerica_rem.models.supported_upgrade import SupportedUpgrade
 from typing import Optional, Set
 from typing_extensions import Self
@@ -31,7 +31,7 @@ class RemProfileRequest(BaseModel):
     A class representing the request body used to retrieve a building's profile.  Attributes ----------     upgrade: Building Upgrade     heating_fuel: Heating Fuel     building_profile: Building Profile
     """ # noqa: E501
     upgrade: SupportedUpgrade
-    heating_fuel: HeatingFuelInput
+    heating_fuel: HeatingFuel
     building_profile: BuildingProfile
     __properties: ClassVar[List[str]] = ["upgrade", "heating_fuel", "building_profile"]
 

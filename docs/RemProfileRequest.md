@@ -7,7 +7,7 @@ A class representing the request body used to retrieve a building's profile.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **upgrade** | [**SupportedUpgrade**](SupportedUpgrade.md) | Building Upgrade | 
-**heating_fuel** | [**HeatingFuelInput**](HeatingFuelInput.md) | Heating Fuel | 
+**heating_fuel** | [**HeatingFuel**](HeatingFuel.md) | Heating Fuel | 
 **building_profile** | [**BuildingProfile**](BuildingProfile.md) | Building Profile | 
 
 ## Example

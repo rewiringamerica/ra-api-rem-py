@@ -15,7 +15,7 @@
 
 import unittest
 
-from rem.models.supported_upgrade import SupportedUpgrade
+from rewiringamerica_rem.models.supported_upgrade import SupportedUpgrade
 
 class TestSupportedUpgrade(unittest.TestCase):
     """SupportedUpgrade unit test stubs"""

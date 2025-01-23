@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "0.3.0"
+__version__ = "0.3.2"
 
 # import apis into sdk package
 from rewiringamerica_rem.api.building_profiler_api import BuildingProfilerApi
@@ -38,8 +38,7 @@ from rewiringamerica_rem.models.building_profile import BuildingProfile
 from rewiringamerica_rem.models.fuel_rate import FuelRate
 from rewiringamerica_rem.models.fuel_savings import FuelSavings
 from rewiringamerica_rem.models.http_validation_error import HTTPValidationError
-from rewiringamerica_rem.models.heating_fuel_input import HeatingFuelInput
-from rewiringamerica_rem.models.heating_fuel_output import HeatingFuelOutput
+from rewiringamerica_rem.models.heating_fuel import HeatingFuel
 from rewiringamerica_rem.models.impact_metric import ImpactMetric
 from rewiringamerica_rem.models.metric_statistics import MetricStatistics
 from rewiringamerica_rem.models.quantity import Quantity

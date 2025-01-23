@@ -15,7 +15,7 @@
 
 import unittest
 
-from rem.models.result_fuel_type import ResultFuelType
+from rewiringamerica_rem.models.result_fuel_type import ResultFuelType
 
 class TestResultFuelType(unittest.TestCase):
     """ResultFuelType unit test stubs"""

@@ -19,24 +19,22 @@ from enum import Enum
 from typing_extensions import Self
 
 
-class SupportedUpgrade(str, Enum):
+class HeatingFuel(str, Enum):
     """
-    Upgrades accepted by the REM API.
+    Heating fuels supported by the API.  Note that we do not currently support \"Other Fuel\" or \"None\".
     """
 
     """
     allowed enum values
     """
-    BASIC_ENCLOSURE = 'basic_enclosure'
-    MIN_EFF_HP_ELEC_BACKUP = 'min_eff_hp_elec_backup'
-    HIGH_EFF_HP_ELEC_BACKUP = 'high_eff_hp_elec_backup'
-    WHOLE_HOME_ELECTRIC_MAX_EFF_BASIC_ENCLOSURE = 'whole_home_electric_max_eff_basic_enclosure'
-    MED_EFF_HP_HERS_SIZING_NO_SETBACK = 'med_eff_hp_hers_sizing_no_setback'
-    MED_EFF_HP_HERS_SIZING_NO_SETBACK_BASIC_ENCLOSURE = 'med_eff_hp_hers_sizing_no_setback_basic_enclosure'
+    ELECTRICITY = 'electricity'
+    FUEL_OIL = 'fuel_oil'
+    NATURAL_GAS = 'natural_gas'
+    PROPANE = 'propane'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
-        """Create an instance of SupportedUpgrade from a JSON string"""
+        """Create an instance of HeatingFuel from a JSON string"""
         return cls(json.loads(json_str))
 
 

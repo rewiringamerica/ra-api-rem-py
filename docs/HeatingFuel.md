@@ -1,4 +1,4 @@
-# HeatingFuelInput
+# HeatingFuel
 
 Heating fuels supported by the API.  Note that we do not currently support \"Other Fuel\" or \"None\".
 

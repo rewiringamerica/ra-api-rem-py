@@ -15,7 +15,7 @@
 
 import unittest
 
-from rem.models.quantity import Quantity
+from rewiringamerica_rem.models.quantity import Quantity
 
 class TestQuantity(unittest.TestCase):
     """Quantity unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from rem.models.fuel_rate import FuelRate
+from rewiringamerica_rem.models.fuel_rate import FuelRate
 
 class TestFuelRate(unittest.TestCase):
     """FuelRate unit test stubs"""

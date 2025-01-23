@@ -15,7 +15,7 @@
 
 import unittest
 
-from rem.models.fuel_savings import FuelSavings
+from rewiringamerica_rem.models.fuel_savings import FuelSavings
 
 class TestFuelSavings(unittest.TestCase):
     """FuelSavings unit test stubs"""
@@ -36,49 +36,49 @@ class TestFuelSavings(unittest.TestCase):
         model = FuelSavings()
         if include_optional:
             return FuelSavings(
-                baseline = rem.models.impact_metric.ImpactMetric(
-                    energy = rem.models.metric_statistics.MetricStatistics(
-                        mean = rem.models.quantity.Quantity(
+                baseline = rewiringamerica_rem.models.impact_metric.ImpactMetric(
+                    energy = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
+                        mean = rewiringamerica_rem.models.quantity.Quantity(
                             value = 1.337, 
                             units = '', ), 
-                        median = rem.models.quantity.Quantity(
+                        median = rewiringamerica_rem.models.quantity.Quantity(
                             value = 1.337, 
                             units = '', ), 
                         percentile_20 = , 
                         percentile_80 = , ), 
-                    emissions = rem.models.metric_statistics.MetricStatistics(
+                    emissions = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
                         mean = , 
                         median = , 
                         percentile_20 = , 
                         percentile_80 = , ), 
                     cost = , ),
-                upgrade = rem.models.impact_metric.ImpactMetric(
-                    energy = rem.models.metric_statistics.MetricStatistics(
-                        mean = rem.models.quantity.Quantity(
+                upgrade = rewiringamerica_rem.models.impact_metric.ImpactMetric(
+                    energy = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
+                        mean = rewiringamerica_rem.models.quantity.Quantity(
                             value = 1.337, 
                             units = '', ), 
-                        median = rem.models.quantity.Quantity(
+                        median = rewiringamerica_rem.models.quantity.Quantity(
                             value = 1.337, 
                             units = '', ), 
                         percentile_20 = , 
                         percentile_80 = , ), 
-                    emissions = rem.models.metric_statistics.MetricStatistics(
+                    emissions = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
                         mean = , 
                         median = , 
                         percentile_20 = , 
                         percentile_80 = , ), 
                     cost = , ),
-                delta = rem.models.impact_metric.ImpactMetric(
-                    energy = rem.models.metric_statistics.MetricStatistics(
-                        mean = rem.models.quantity.Quantity(
+                delta = rewiringamerica_rem.models.impact_metric.ImpactMetric(
+                    energy = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
+                        mean = rewiringamerica_rem.models.quantity.Quantity(
                             value = 1.337, 
                             units = '', ), 
-                        median = rem.models.quantity.Quantity(
+                        median = rewiringamerica_rem.models.quantity.Quantity(
                             value = 1.337, 
                             units = '', ), 
                         percentile_20 = , 
                         percentile_80 = , ), 
-                    emissions = rem.models.metric_statistics.MetricStatistics(
+                    emissions = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
                         mean = , 
                         median = , 
                         percentile_20 = , 
@@ -87,49 +87,49 @@ class TestFuelSavings(unittest.TestCase):
             )
         else:
             return FuelSavings(
-                baseline = rem.models.impact_metric.ImpactMetric(
-                    energy = rem.models.metric_statistics.MetricStatistics(
-                        mean = rem.models.quantity.Quantity(
+                baseline = rewiringamerica_rem.models.impact_metric.ImpactMetric(
+                    energy = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
+                        mean = rewiringamerica_rem.models.quantity.Quantity(
                             value = 1.337, 
                             units = '', ), 
-                        median = rem.models.quantity.Quantity(
+                        median = rewiringamerica_rem.models.quantity.Quantity(
                             value = 1.337, 
                             units = '', ), 
                         percentile_20 = , 
                         percentile_80 = , ), 
-                    emissions = rem.models.metric_statistics.MetricStatistics(
+                    emissions = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
                         mean = , 
                         median = , 
                         percentile_20 = , 
                         percentile_80 = , ), 
                     cost = , ),
-                upgrade = rem.models.impact_metric.ImpactMetric(
-                    energy = rem.models.metric_statistics.MetricStatistics(
-                        mean = rem.models.quantity.Quantity(
+                upgrade = rewiringamerica_rem.models.impact_metric.ImpactMetric(
+                    energy = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
+                        mean = rewiringamerica_rem.models.quantity.Quantity(
                             value = 1.337, 
                             units = '', ), 
-                        median = rem.models.quantity.Quantity(
+                        median = rewiringamerica_rem.models.quantity.Quantity(
                             value = 1.337, 
                             units = '', ), 
                         percentile_20 = , 
                         percentile_80 = , ), 
-                    emissions = rem.models.metric_statistics.MetricStatistics(
+                    emissions = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
                         mean = , 
                         median = , 
                         percentile_20 = , 
                         percentile_80 = , ), 
                     cost = , ),
-                delta = rem.models.impact_metric.ImpactMetric(
-                    energy = rem.models.metric_statistics.MetricStatistics(
-                        mean = rem.models.quantity.Quantity(
+                delta = rewiringamerica_rem.models.impact_metric.ImpactMetric(
+                    energy = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
+                        mean = rewiringamerica_rem.models.quantity.Quantity(
                             value = 1.337, 
                             units = '', ), 
-                        median = rem.models.quantity.Quantity(
+                        median = rewiringamerica_rem.models.quantity.Quantity(
                             value = 1.337, 
                             units = '', ), 
                         percentile_20 = , 
                         percentile_80 = , ), 
-                    emissions = rem.models.metric_statistics.MetricStatistics(
+                    emissions = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
                         mean = , 
                         median = , 
                         percentile_20 = , 

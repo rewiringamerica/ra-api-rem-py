@@ -15,7 +15,7 @@
 
 import unittest
 
-from rem.models.building_features import BuildingFeatures
+from rewiringamerica_rem.models.building_features import BuildingFeatures
 
 class TestBuildingFeatures(unittest.TestCase):
     """BuildingFeatures unit test stubs"""

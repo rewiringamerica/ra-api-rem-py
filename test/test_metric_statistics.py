@@ -15,7 +15,7 @@
 
 import unittest
 
-from rem.models.metric_statistics import MetricStatistics
+from rewiringamerica_rem.models.metric_statistics import MetricStatistics
 
 class TestMetricStatistics(unittest.TestCase):
     """MetricStatistics unit test stubs"""
@@ -36,31 +36,31 @@ class TestMetricStatistics(unittest.TestCase):
         model = MetricStatistics()
         if include_optional:
             return MetricStatistics(
-                mean = rem.models.quantity.Quantity(
+                mean = rewiringamerica_rem.models.quantity.Quantity(
                     value = 1.337, 
                     units = '', ),
-                median = rem.models.quantity.Quantity(
+                median = rewiringamerica_rem.models.quantity.Quantity(
                     value = 1.337, 
                     units = '', ),
-                percentile_20 = rem.models.quantity.Quantity(
+                percentile_20 = rewiringamerica_rem.models.quantity.Quantity(
                     value = 1.337, 
                     units = '', ),
-                percentile_80 = rem.models.quantity.Quantity(
+                percentile_80 = rewiringamerica_rem.models.quantity.Quantity(
                     value = 1.337, 
                     units = '', )
             )
         else:
             return MetricStatistics(
-                mean = rem.models.quantity.Quantity(
+                mean = rewiringamerica_rem.models.quantity.Quantity(
                     value = 1.337, 
                     units = '', ),
-                median = rem.models.quantity.Quantity(
+                median = rewiringamerica_rem.models.quantity.Quantity(
                     value = 1.337, 
                     units = '', ),
-                percentile_20 = rem.models.quantity.Quantity(
+                percentile_20 = rewiringamerica_rem.models.quantity.Quantity(
                     value = 1.337, 
                     units = '', ),
-                percentile_80 = rem.models.quantity.Quantity(
+                percentile_80 = rewiringamerica_rem.models.quantity.Quantity(
                     value = 1.337, 
                     units = '', ),
         )

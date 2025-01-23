@@ -15,7 +15,7 @@
 
 import unittest
 
-from rem.api.residential_electrification_model_api import ResidentialElectrificationModelApi
+from rewiringamerica_rem.api.residential_electrification_model_api import ResidentialElectrificationModelApi
 
 
 class TestResidentialElectrificationModelApi(unittest.TestCase):

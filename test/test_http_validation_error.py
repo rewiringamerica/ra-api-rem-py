@@ -15,7 +15,7 @@
 
 import unittest
 
-from rem.models.http_validation_error import HTTPValidationError
+from rewiringamerica_rem.models.http_validation_error import HTTPValidationError
 
 class TestHTTPValidationError(unittest.TestCase):
     """HTTPValidationError unit test stubs"""
@@ -37,7 +37,7 @@ class TestHTTPValidationError(unittest.TestCase):
         if include_optional:
             return HTTPValidationError(
                 detail = [
-                    rem.models.validation_error.ValidationError(
+                    rewiringamerica_rem.models.validation_error.ValidationError(
                         loc = [
                             null
                             ], 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from rem.models.impact_metric import ImpactMetric
+from rewiringamerica_rem.models.impact_metric import ImpactMetric
 
 class TestImpactMetric(unittest.TestCase):
     """ImpactMetric unit test stubs"""
@@ -36,29 +36,29 @@ class TestImpactMetric(unittest.TestCase):
         model = ImpactMetric()
         if include_optional:
             return ImpactMetric(
-                energy = rem.models.metric_statistics.MetricStatistics(
-                    mean = rem.models.quantity.Quantity(
+                energy = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
+                    mean = rewiringamerica_rem.models.quantity.Quantity(
                         value = 1.337, 
                         units = '', ), 
-                    median = rem.models.quantity.Quantity(
-                        value = 1.337, 
-                        units = '', ), 
-                    percentile_20 = , 
-                    percentile_80 = , ),
-                emissions = rem.models.metric_statistics.MetricStatistics(
-                    mean = rem.models.quantity.Quantity(
-                        value = 1.337, 
-                        units = '', ), 
-                    median = rem.models.quantity.Quantity(
+                    median = rewiringamerica_rem.models.quantity.Quantity(
                         value = 1.337, 
                         units = '', ), 
                     percentile_20 = , 
                     percentile_80 = , ),
-                cost = rem.models.metric_statistics.MetricStatistics(
-                    mean = rem.models.quantity.Quantity(
+                emissions = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
+                    mean = rewiringamerica_rem.models.quantity.Quantity(
                         value = 1.337, 
                         units = '', ), 
-                    median = rem.models.quantity.Quantity(
+                    median = rewiringamerica_rem.models.quantity.Quantity(
+                        value = 1.337, 
+                        units = '', ), 
+                    percentile_20 = , 
+                    percentile_80 = , ),
+                cost = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
+                    mean = rewiringamerica_rem.models.quantity.Quantity(
+                        value = 1.337, 
+                        units = '', ), 
+                    median = rewiringamerica_rem.models.quantity.Quantity(
                         value = 1.337, 
                         units = '', ), 
                     percentile_20 = , 
@@ -66,29 +66,29 @@ class TestImpactMetric(unittest.TestCase):
             )
         else:
             return ImpactMetric(
-                energy = rem.models.metric_statistics.MetricStatistics(
-                    mean = rem.models.quantity.Quantity(
+                energy = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
+                    mean = rewiringamerica_rem.models.quantity.Quantity(
                         value = 1.337, 
                         units = '', ), 
-                    median = rem.models.quantity.Quantity(
-                        value = 1.337, 
-                        units = '', ), 
-                    percentile_20 = , 
-                    percentile_80 = , ),
-                emissions = rem.models.metric_statistics.MetricStatistics(
-                    mean = rem.models.quantity.Quantity(
-                        value = 1.337, 
-                        units = '', ), 
-                    median = rem.models.quantity.Quantity(
+                    median = rewiringamerica_rem.models.quantity.Quantity(
                         value = 1.337, 
                         units = '', ), 
                     percentile_20 = , 
                     percentile_80 = , ),
-                cost = rem.models.metric_statistics.MetricStatistics(
-                    mean = rem.models.quantity.Quantity(
+                emissions = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
+                    mean = rewiringamerica_rem.models.quantity.Quantity(
                         value = 1.337, 
                         units = '', ), 
-                    median = rem.models.quantity.Quantity(
+                    median = rewiringamerica_rem.models.quantity.Quantity(
+                        value = 1.337, 
+                        units = '', ), 
+                    percentile_20 = , 
+                    percentile_80 = , ),
+                cost = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
+                    mean = rewiringamerica_rem.models.quantity.Quantity(
+                        value = 1.337, 
+                        units = '', ), 
+                    median = rewiringamerica_rem.models.quantity.Quantity(
                         value = 1.337, 
                         units = '', ), 
                     percentile_20 = , 

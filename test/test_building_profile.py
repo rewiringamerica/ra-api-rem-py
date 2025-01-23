@@ -15,7 +15,7 @@
 
 import unittest
 
-from rem.models.building_profile import BuildingProfile
+from rewiringamerica_rem.models.building_profile import BuildingProfile
 
 class TestBuildingProfile(unittest.TestCase):
     """BuildingProfile unit test stubs"""
@@ -36,12 +36,12 @@ class TestBuildingProfile(unittest.TestCase):
         model = BuildingProfile()
         if include_optional:
             return BuildingProfile(
-                county = '',
-                puma = '',
-                ashrae_iecc_climate_zone_2004 = '',
-                weather_file_city = '',
-                state = '',
-                building_features = rem.models.building_features.BuildingFeatures(
+                county = 'G1700310',
+                puma = 'G17003159',
+                ashrae_iecc_climate_zone_2004 = '4A',
+                weather_file_city = 'Chicago Midway Ap',
+                state = 'IL',
+                building_features = rewiringamerica_rem.models.building_features.BuildingFeatures(
                     geometry_floor_area = 1.337, 
                     geometry_stories = 1.337, 
                     bedrooms = 1.337, 
@@ -91,58 +91,11 @@ class TestBuildingProfile(unittest.TestCase):
             )
         else:
             return BuildingProfile(
-                county = '',
-                puma = '',
-                ashrae_iecc_climate_zone_2004 = '',
-                weather_file_city = '',
-                state = '',
-                building_features = rem.models.building_features.BuildingFeatures(
-                    geometry_floor_area = 1.337, 
-                    geometry_stories = 1.337, 
-                    bedrooms = 1.337, 
-                    bathrooms = 1.337, 
-                    vintage = 1.337, 
-                    geometry_attic_type = [
-                        ''
-                        ], 
-                    hvac_cooling_type = [
-                        ''
-                        ], 
-                    hvac_heating_type = [
-                        ''
-                        ], 
-                    geometry_garage = [
-                        ''
-                        ], 
-                    misc_pool = [
-                        ''
-                        ], 
-                    misc_hot_tub_spa = [
-                        ''
-                        ], 
-                    misc_well_pump = [
-                        ''
-                        ], 
-                    misc_pool_heater = [
-                        ''
-                        ], 
-                    geometry_wall_type = [
-                        ''
-                        ], 
-                    geometry_wall_exterior_finish = [
-                        ''
-                        ], 
-                    roof_material = [
-                        ''
-                        ], 
-                    geometry_building_type_acs = [
-                        ''
-                        ], 
-                    geometry_building_number_units_sfa = 1.337, 
-                    geometry_building_number_units_mf = 1.337, 
-                    heating_fuel = [
-                        ''
-                        ], ),
+                county = 'G1700310',
+                puma = 'G17003159',
+                ashrae_iecc_climate_zone_2004 = '4A',
+                weather_file_city = 'Chicago Midway Ap',
+                state = 'IL',
         )
         """
 

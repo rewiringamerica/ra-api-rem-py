@@ -19,7 +19,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
-from typing import Any, ClassVar, Dict, List
+from typing import Any, ClassVar, Dict, List, Optional
 from rewiringamerica_rem.models.building_features import BuildingFeatures
 from typing import Optional, Set
 from typing_extensions import Self
@@ -33,7 +33,7 @@ class BuildingProfile(BaseModel):
     ashrae_iecc_climate_zone_2004: StrictStr
     weather_file_city: StrictStr
     state: StrictStr
-    building_features: BuildingFeatures
+    building_features: Optional[BuildingFeatures] = None
     __properties: ClassVar[List[str]] = ["county", "puma", "ashrae_iecc_climate_zone_2004", "weather_file_city", "state", "building_features"]
 
     model_config = ConfigDict(

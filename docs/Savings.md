@@ -6,9 +6,9 @@ Represent the savings due to an upgrade.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fuel_results** | [**Dict[str, FuelSavings]**](FuelSavings.md) | A list of results, one for each fuel type. | 
-**rates** | **Dict[str, List[FuelRate]]** | A list of rates used to compute the cost of fuel consumed. | 
-**emissions_factors** | [**Dict[str, Quantity]**](Quantity.md) | A list of factors used to compute the the emissions from various fuels. | 
+**fuel_results** | [**Dict[str, FuelSavings]**](FuelSavings.md) |  | 
+**rates** | **Dict[str, List[FuelRate]]** |  | 
+**emissions_factors** | [**Dict[str, Quantity]**](Quantity.md) |  | 
 
 ## Example
 

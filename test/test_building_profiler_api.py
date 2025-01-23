@@ -15,7 +15,7 @@
 
 import unittest
 
-from rem.api.building_profiler_api import BuildingProfilerApi
+from rewiringamerica_rem.api.building_profiler_api import BuildingProfilerApi
 
 
 class TestBuildingProfilerApi(unittest.TestCase):

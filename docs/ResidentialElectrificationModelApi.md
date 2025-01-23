@@ -22,22 +22,12 @@ Predict a user's savings using the Residential Electrification Model.  This API 
 
 ```python
 import rewiringamerica_rem
-from rewiringamerica_rem.models.heating_fuel_input import HeatingFuelInput
+from rewiringamerica_rem.models.heating_fuel import HeatingFuel
 from rewiringamerica_rem.models.savings import Savings
 from rewiringamerica_rem.models.supported_upgrade import SupportedUpgrade
 from rewiringamerica_rem.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.rewiringamerica.org
-# See configuration.py for a list of all supported configuration parameters.
-configuration = rewiringamerica_rem.Configuration(
-    host = "https://api.rewiringamerica.org"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
 # Configure Bearer authorization: auth
 configuration = rewiringamerica_rem.Configuration(
@@ -50,7 +40,7 @@ with rewiringamerica_rem.ApiClient(configuration) as api_client:
     api_instance = rewiringamerica_rem.ResidentialElectrificationModelApi(api_client)
     upgrade = rewiringamerica_rem.SupportedUpgrade() # SupportedUpgrade | The upgrade whose effects we want to analyze. Supported values are as follows: - `basic_enclosure`: A basic weatherization upgrade for the home   as described in measure package 1 (on page 4) of [this   document](https://oedi-data-lake.s3.amazonaws.com/nrel-pds-building-stock/end-use-load-profiles-for-us-building-stock/2022/EUSS_ResRound1_Technical_Documentation.pdf). - `min_eff_hp_elec_backup`: A relatively-low efficiency heat pump upgrade for the home’s HVAC   system as described in measure package 3 (on page 5) of [this   document](https://oedi-data-lake.s3.amazonaws.com/nrel-pds-building-stock/end-use-load-profiles-for-us-building-stock/2022/EUSS_ResRound1_Technical_Documentation.pdf). - `high_eff_hp_elec_backup`: A high efficiency heat pump upgrade for the home’s HVAC system as   described in measure package 4 (on page 6) of [this   document](https://oedi-data-lake.s3.amazonaws.com/nrel-pds-building-stock/end-use-load-profiles-for-us-building-stock/2022/EUSS_ResRound1_Technical_Documentation.pdf). - `whole_home_electric_max_eff_basic_enclosure`: A whole-home upgrade including a high   efficiency heat pump for the home’s HVAC system, basic weatherization, a heat pump water heater, a heat pump dryer,   and an induction stove as described in measure package 9 (on page 9) of [this   document](https://oedi-data-lake.s3.amazonaws.com/nrel-pds-building-stock/end-use-load-profiles-for-us-building-stock/2022/EUSS_ResRound1_Technical_Documentation.pdf). - `med_eff_hp_hers_sizing_no_setback`: A medium-efficiency heat pump upgrade for   the home's HVAC system. Rewiring America simulated this upgrade using the same tools NREL uses for ResStock. - `med_eff_hp_hers_sizing_no_setback_basic_enclosure`: A custom upgrade based on a   medium-efficiency heat pump and basic weatherization upgrade for the home. Rewiring America simulated this upgrade   using the same tools NREL uses for ResStock. 
     address = 'address_example' # str | The address of the home being upgraded.
-    heating_fuel = rewiringamerica_rem.HeatingFuelInput() # HeatingFuelInput | The heating fuel used in the home before the upgrade. Supported values are as follows: - `electricity`: the home was heated with electric heating, such as   baseboard heating, an electric boiler, or an electric furnace. - `natural_gas`: The home was heated with a natural gas furnace. - `fuel_oil`: The home was heated with a fuel oil boiler or furnace. - `propane`:  The home was heated with a propane furnace. 
+    heating_fuel = rewiringamerica_rem.HeatingFuel() # HeatingFuel | The heating fuel used in the home before the upgrade. Supported values are as follows: - `electricity`: the home was heated with electric heating, such as   baseboard heating, an electric boiler, or an electric furnace. - `natural_gas`: The home was heated with a natural gas furnace. - `fuel_oil`: The home was heated with a fuel oil boiler or furnace. - `propane`:  The home was heated with a propane furnace. 
 
     try:
         # Get By Address
@@ -70,7 +60,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **upgrade** | [**SupportedUpgrade**](SupportedUpgrade.md)| The upgrade whose effects we want to analyze. Supported values are as follows: - &#x60;basic_enclosure&#x60;: A basic weatherization upgrade for the home   as described in measure package 1 (on page 4) of [this   document](https://oedi-data-lake.s3.amazonaws.com/nrel-pds-building-stock/end-use-load-profiles-for-us-building-stock/2022/EUSS_ResRound1_Technical_Documentation.pdf). - &#x60;min_eff_hp_elec_backup&#x60;: A relatively-low efficiency heat pump upgrade for the home’s HVAC   system as described in measure package 3 (on page 5) of [this   document](https://oedi-data-lake.s3.amazonaws.com/nrel-pds-building-stock/end-use-load-profiles-for-us-building-stock/2022/EUSS_ResRound1_Technical_Documentation.pdf). - &#x60;high_eff_hp_elec_backup&#x60;: A high efficiency heat pump upgrade for the home’s HVAC system as   described in measure package 4 (on page 6) of [this   document](https://oedi-data-lake.s3.amazonaws.com/nrel-pds-building-stock/end-use-load-profiles-for-us-building-stock/2022/EUSS_ResRound1_Technical_Documentation.pdf). - &#x60;whole_home_electric_max_eff_basic_enclosure&#x60;: A whole-home upgrade including a high   efficiency heat pump for the home’s HVAC system, basic weatherization, a heat pump water heater, a heat pump dryer,   and an induction stove as described in measure package 9 (on page 9) of [this   document](https://oedi-data-lake.s3.amazonaws.com/nrel-pds-building-stock/end-use-load-profiles-for-us-building-stock/2022/EUSS_ResRound1_Technical_Documentation.pdf). - &#x60;med_eff_hp_hers_sizing_no_setback&#x60;: A medium-efficiency heat pump upgrade for   the home&#39;s HVAC system. Rewiring America simulated this upgrade using the same tools NREL uses for ResStock. - &#x60;med_eff_hp_hers_sizing_no_setback_basic_enclosure&#x60;: A custom upgrade based on a   medium-efficiency heat pump and basic weatherization upgrade for the home. Rewiring America simulated this upgrade   using the same tools NREL uses for ResStock.  | 
  **address** | **str**| The address of the home being upgraded. | 
- **heating_fuel** | [**HeatingFuelInput**](HeatingFuelInput.md)| The heating fuel used in the home before the upgrade. Supported values are as follows: - &#x60;electricity&#x60;: the home was heated with electric heating, such as   baseboard heating, an electric boiler, or an electric furnace. - &#x60;natural_gas&#x60;: The home was heated with a natural gas furnace. - &#x60;fuel_oil&#x60;: The home was heated with a fuel oil boiler or furnace. - &#x60;propane&#x60;:  The home was heated with a propane furnace.  | 
+ **heating_fuel** | [**HeatingFuel**](.md)| The heating fuel used in the home before the upgrade. Supported values are as follows: - &#x60;electricity&#x60;: the home was heated with electric heating, such as   baseboard heating, an electric boiler, or an electric furnace. - &#x60;natural_gas&#x60;: The home was heated with a natural gas furnace. - &#x60;fuel_oil&#x60;: The home was heated with a fuel oil boiler or furnace. - &#x60;propane&#x60;:  The home was heated with a propane furnace.  | 
 
 ### Return type
 
@@ -112,16 +102,6 @@ from rewiringamerica_rem.models.savings import Savings
 from rewiringamerica_rem.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.rewiringamerica.org
-# See configuration.py for a list of all supported configuration parameters.
-configuration = rewiringamerica_rem.Configuration(
-    host = "https://api.rewiringamerica.org"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
 # Configure Bearer authorization: auth
 configuration = rewiringamerica_rem.Configuration(
@@ -190,16 +170,6 @@ import rewiringamerica_rem
 from rewiringamerica_rem.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.rewiringamerica.org
-# See configuration.py for a list of all supported configuration parameters.
-configuration = rewiringamerica_rem.Configuration(
-    host = "https://api.rewiringamerica.org"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
 # Configure Bearer authorization: auth
 configuration = rewiringamerica_rem.Configuration(

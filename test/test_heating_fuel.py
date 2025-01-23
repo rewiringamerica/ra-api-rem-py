@@ -15,10 +15,10 @@
 
 import unittest
 
-from rem.models.heating_fuel_output import HeatingFuelOutput
+from rewiringamerica_rem.models.heating_fuel import HeatingFuel
 
-class TestHeatingFuelOutput(unittest.TestCase):
-    """HeatingFuelOutput unit test stubs"""
+class TestHeatingFuel(unittest.TestCase):
+    """HeatingFuel unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,9 +26,9 @@ class TestHeatingFuelOutput(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testHeatingFuelOutput(self):
-        """Test HeatingFuelOutput"""
-        # inst = HeatingFuelOutput()
+    def testHeatingFuel(self):
+        """Test HeatingFuel"""
+        # inst = HeatingFuel()
 
 if __name__ == '__main__':
     unittest.main()

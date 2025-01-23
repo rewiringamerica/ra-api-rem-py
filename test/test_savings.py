@@ -15,7 +15,7 @@
 
 import unittest
 
-from rem.models.savings import Savings
+from rewiringamerica_rem.models.savings import Savings
 
 class TestSavings(unittest.TestCase):
     """Savings unit test stubs"""
@@ -37,24 +37,24 @@ class TestSavings(unittest.TestCase):
         if include_optional:
             return Savings(
                 fuel_results = {
-                    'key' : rem.models.fuel_savings.FuelSavings(
-                        baseline = rem.models.impact_metric.ImpactMetric(
-                            energy = rem.models.metric_statistics.MetricStatistics(
-                                mean = rem.models.quantity.Quantity(
+                    'key' : rewiringamerica_rem.models.fuel_savings.FuelSavings(
+                        baseline = rewiringamerica_rem.models.impact_metric.ImpactMetric(
+                            energy = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
+                                mean = rewiringamerica_rem.models.quantity.Quantity(
                                     value = 1.337, 
                                     units = '', ), 
-                                median = rem.models.quantity.Quantity(
+                                median = rewiringamerica_rem.models.quantity.Quantity(
                                     value = 1.337, 
                                     units = '', ), 
                                 percentile_20 = , 
                                 percentile_80 = , ), 
-                            emissions = rem.models.metric_statistics.MetricStatistics(
+                            emissions = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
                                 mean = , 
                                 median = , 
                                 percentile_20 = , 
                                 percentile_80 = , ), 
                             cost = , ), 
-                        upgrade = rem.models.impact_metric.ImpactMetric(
+                        upgrade = rewiringamerica_rem.models.impact_metric.ImpactMetric(
                             energy = , 
                             emissions = , 
                             cost = , ), 
@@ -62,14 +62,14 @@ class TestSavings(unittest.TestCase):
                     },
                 rates = {
                     'key' : [
-                        rem.models.fuel_rate.FuelRate(
+                        rewiringamerica_rem.models.fuel_rate.FuelRate(
                             value = 1.337, 
                             units = '', 
                             rate_type = 'volumetric', )
                         ]
                     },
                 emissions_factors = {
-                    'key' : rem.models.quantity.Quantity(
+                    'key' : rewiringamerica_rem.models.quantity.Quantity(
                         value = 1.337, 
                         units = '', )
                     }
@@ -77,24 +77,24 @@ class TestSavings(unittest.TestCase):
         else:
             return Savings(
                 fuel_results = {
-                    'key' : rem.models.fuel_savings.FuelSavings(
-                        baseline = rem.models.impact_metric.ImpactMetric(
-                            energy = rem.models.metric_statistics.MetricStatistics(
-                                mean = rem.models.quantity.Quantity(
+                    'key' : rewiringamerica_rem.models.fuel_savings.FuelSavings(
+                        baseline = rewiringamerica_rem.models.impact_metric.ImpactMetric(
+                            energy = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
+                                mean = rewiringamerica_rem.models.quantity.Quantity(
                                     value = 1.337, 
                                     units = '', ), 
-                                median = rem.models.quantity.Quantity(
+                                median = rewiringamerica_rem.models.quantity.Quantity(
                                     value = 1.337, 
                                     units = '', ), 
                                 percentile_20 = , 
                                 percentile_80 = , ), 
-                            emissions = rem.models.metric_statistics.MetricStatistics(
+                            emissions = rewiringamerica_rem.models.metric_statistics.MetricStatistics(
                                 mean = , 
                                 median = , 
                                 percentile_20 = , 
                                 percentile_80 = , ), 
                             cost = , ), 
-                        upgrade = rem.models.impact_metric.ImpactMetric(
+                        upgrade = rewiringamerica_rem.models.impact_metric.ImpactMetric(
                             energy = , 
                             emissions = , 
                             cost = , ), 
@@ -102,14 +102,14 @@ class TestSavings(unittest.TestCase):
                     },
                 rates = {
                     'key' : [
-                        rem.models.fuel_rate.FuelRate(
+                        rewiringamerica_rem.models.fuel_rate.FuelRate(
                             value = 1.337, 
                             units = '', 
                             rate_type = 'volumetric', )
                         ]
                     },
                 emissions_factors = {
-                    'key' : rem.models.quantity.Quantity(
+                    'key' : rewiringamerica_rem.models.quantity.Quantity(
                         value = 1.337, 
                         units = '', )
                     },

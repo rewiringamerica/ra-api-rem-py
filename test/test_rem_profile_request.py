@@ -15,7 +15,7 @@
 
 import unittest
 
-from rem.models.rem_profile_request import RemProfileRequest
+from rewiringamerica_rem.models.rem_profile_request import RemProfileRequest
 
 class TestRemProfileRequest(unittest.TestCase):
     """RemProfileRequest unit test stubs"""
@@ -36,15 +36,15 @@ class TestRemProfileRequest(unittest.TestCase):
         model = RemProfileRequest()
         if include_optional:
             return RemProfileRequest(
-                upgrade = 'basic_enclosure',
-                heating_fuel = 'electricity',
-                building_profile = rem.models.building_profile.BuildingProfile(
-                    county = '', 
-                    puma = '', 
-                    ashrae_iecc_climate_zone_2004 = '', 
-                    weather_file_city = '', 
-                    state = '', 
-                    building_features = rem.models.building_features.BuildingFeatures(
+                upgrade = med_eff_hp_hers_sizing_no_setback,
+                heating_fuel = natural_gas,
+                building_profile = rewiringamerica_rem.models.building_profile.BuildingProfile(
+                    county = 'G1700310', 
+                    puma = 'G17003159', 
+                    ashrae_iecc_climate_zone_2004 = '4A', 
+                    weather_file_city = 'Chicago Midway Ap', 
+                    state = 'IL', 
+                    building_features = rewiringamerica_rem.models.building_features.BuildingFeatures(
                         geometry_floor_area = 1.337, 
                         geometry_stories = 1.337, 
                         bedrooms = 1.337, 
@@ -94,15 +94,15 @@ class TestRemProfileRequest(unittest.TestCase):
             )
         else:
             return RemProfileRequest(
-                upgrade = 'basic_enclosure',
-                heating_fuel = 'electricity',
-                building_profile = rem.models.building_profile.BuildingProfile(
-                    county = '', 
-                    puma = '', 
-                    ashrae_iecc_climate_zone_2004 = '', 
-                    weather_file_city = '', 
-                    state = '', 
-                    building_features = rem.models.building_features.BuildingFeatures(
+                upgrade = med_eff_hp_hers_sizing_no_setback,
+                heating_fuel = natural_gas,
+                building_profile = rewiringamerica_rem.models.building_profile.BuildingProfile(
+                    county = 'G1700310', 
+                    puma = 'G17003159', 
+                    ashrae_iecc_climate_zone_2004 = '4A', 
+                    weather_file_city = 'Chicago Midway Ap', 
+                    state = 'IL', 
+                    building_features = rewiringamerica_rem.models.building_features.BuildingFeatures(
                         geometry_floor_area = 1.337, 
                         geometry_stories = 1.337, 
                         bedrooms = 1.337, 

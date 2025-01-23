@@ -15,7 +15,7 @@
 
 import unittest
 
-from rem.models.validation_error_loc_inner import ValidationErrorLocInner
+from rewiringamerica_rem.models.validation_error_loc_inner import ValidationErrorLocInner
 
 class TestValidationErrorLocInner(unittest.TestCase):
     """ValidationErrorLocInner unit test stubs"""
