@@ -1,14 +1,14 @@
 # FuelSavings
 
-A class to represent savings data for a particular fuel.
+A class to represent savings data for a particular fuel.  Attributes ----------     baseline (FuelMetrics): The data if no upgrade is passed into the surrogate model.     upgrade (FuelMetrics): The data if an upgrade is passed into the surrogate model.     delta (FuelMetrics): The deltas if an upgrade is passed into the surrogate model.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**baseline** | [**ImpactMetric**](ImpactMetric.md) | The data if no upgrade is passed into the surrogate model. | 
-**upgrade** | [**ImpactMetric**](ImpactMetric.md) | The data if an upgrade is passed into the surrogate model. | 
-**delta** | [**ImpactMetric**](ImpactMetric.md) | The deltas if an upgrade is passed into the surrogate model. | 
+**baseline** | [**ImpactMetric**](ImpactMetric.md) |  | 
+**upgrade** | [**ImpactMetric**](ImpactMetric.md) |  | 
+**delta** | [**ImpactMetric**](ImpactMetric.md) |  | 
 
 ## Example
 

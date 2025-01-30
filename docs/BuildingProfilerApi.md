@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 Get Home Profile
 
-Geocode an address and match against ATTOM data to find building features for a given residence.  This implementation takes in an address as a required query parameter and returns geographic characteristics and building features about the home if the input address is valid.
+Geocode an address and match against ATTOM data to find building features for a given residence.  This implementation takes in an address as a required query parameter and returns geographic characteristics and building features about the home if the input address is valid.  Parameters ----------     address: (str) The full address string for a location including street number and name, city, state,         and zip code.  Returns -------     BuildingProfile: JSON containing geographic information like county or state and building features like         square footage or vintage for the residence located at the given address.
 
 ### Example
 
@@ -52,7 +52,7 @@ with rewiringamerica_rem.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **address** | **str**| The full address string for a location including street number and name, city, state,         and zip code. | 
+ **address** | **str**| The location of a home. | 
 
 ### Return type
 

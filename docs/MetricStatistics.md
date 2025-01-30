@@ -1,15 +1,15 @@
 # MetricStatistics
 
-Represents a statistic associated with a particular fuel and type of impact.
+Represents a statistic associated with a particular fuel and type of impact.  Attributes ----------     mean: Mean.     median: Median.     percentile_20: 20th percentile.     percentile_80: 80th percentile.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mean** | [**Quantity**](Quantity.md) | Mean. | 
-**median** | [**Quantity**](Quantity.md) | Median. | 
-**percentile_20** | [**Quantity**](Quantity.md) | 20th percentile. | 
-**percentile_80** | [**Quantity**](Quantity.md) | 80th percentile. | 
+**mean** | [**Quantity**](Quantity.md) |  | 
+**median** | [**Quantity**](Quantity.md) |  | 
+**percentile_20** | [**Quantity**](Quantity.md) |  | 
+**percentile_80** | [**Quantity**](Quantity.md) |  | 
 
 ## Example
 

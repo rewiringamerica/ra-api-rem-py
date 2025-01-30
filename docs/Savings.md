@@ -1,6 +1,6 @@
 # Savings
 
-Represent the savings due to an upgrade.
+Represent the savings due to an upgrade.  Attributes ---------- fuel_results     A list of results, one for each fuel type. rates:     A list of rates used to compute the cost of fuel consumed. emissions_factors:     A list of factors used to compute the the emissions from various fuels.
 
 ## Properties
 

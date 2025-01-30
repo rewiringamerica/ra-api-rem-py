@@ -1,14 +1,14 @@
 # ImpactMetric
 
-Represents a collection of impacts associated with a fuel.
+Represents a collection of impacts associated with a fuel.  Attributes ---------- energy     Energy statistics emissions     Emissions statistics cost     Cost statistics
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**energy** | [**MetricStatistics**](MetricStatistics.md) | Energy statistics | 
-**emissions** | [**MetricStatistics**](MetricStatistics.md) | Emissions statistics | 
-**cost** | [**MetricStatistics**](MetricStatistics.md) | Cost statistics | 
+**energy** | [**MetricStatistics**](MetricStatistics.md) |  | 
+**emissions** | [**MetricStatistics**](MetricStatistics.md) |  | 
+**cost** | [**MetricStatistics**](MetricStatistics.md) |  | 
 
 ## Example
 

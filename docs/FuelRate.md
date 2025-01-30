@@ -1,6 +1,6 @@
 # FuelRate
 
-Represents a rate.  It is a `Quantity` with the addition of a rate type.
+Represents a rate.  It is a `Quantity` with the addition of a rate type.  Attributes ----------     rate_type (str): The type of rate. Values can be \"fixed\" or \"volumetric\".
 
 ## Properties
 
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **value** | **float** |  | [optional] [default to 0.0]
 **units** | **str** |  | 
-**rate_type** | **str** | The type of rate. Values can be \"fixed\" or \"volumetric\". | [optional] [default to 'volumetric']
+**rate_type** | **str** |  | [optional] [default to 'volumetric']
 
 ## Example
 

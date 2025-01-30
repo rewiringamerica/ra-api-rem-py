@@ -1,13 +1,13 @@
 # Quantity
 
-A class to represent a quantity, which is a value with units.
+A class to represent a quantity, which is a value with units.  Attributes ----------     value (float): The numerical value.     units (str): The units.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | **float** | The numerical value. | [optional] [default to 0.0]
-**units** | **str** | The units. | 
+**value** | **float** |  | [optional] [default to 0.0]
+**units** | **str** |  | 
 
 ## Example
 
