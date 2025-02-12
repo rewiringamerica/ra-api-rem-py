@@ -1,14 +1,14 @@
 # Savings
 
-Represent the savings due to an upgrade.  Attributes ---------- fuel_results     A list of results, one for each fuel type. rates:     A list of rates used to compute the cost of fuel consumed. emissions_factors:     A list of factors used to compute the the emissions from various fuels.
+Represents the impacts of an upgrade and the rates and emissions factors used to compute these impacts.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fuel_results** | [**Dict[str, FuelSavings]**](FuelSavings.md) |  | 
-**rates** | **Dict[str, List[FuelRate]]** |  | 
-**emissions_factors** | [**Dict[str, Quantity]**](Quantity.md) |  | 
+**fuel_results** | [**Dict[str, FuelSavings]**](FuelSavings.md) | A list of results, one for each fuel type. | 
+**rates** | **Dict[str, List[FuelRate]]** | A list of rates used to compute the cost of consuming each fuel. | 
+**emissions_factors** | [**Dict[str, Quantity]**](Quantity.md) | A list of conversion factors used to compute the emissions from each fuel. | 
 
 ## Example
 

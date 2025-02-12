@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rewiringamerica_rem"
-version = "0.1.0"
+version = "0.4.2"
 description = "Residential Electrification Model API"
 authors = ["Rewiring America <datascience@rewiringamerica.org>"]
 license = "Apache 2.0"

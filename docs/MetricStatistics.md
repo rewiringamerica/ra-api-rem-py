@@ -1,15 +1,15 @@
 # MetricStatistics
 
-Represents a statistic associated with a particular fuel and type of impact.  Attributes ----------     mean: Mean.     median: Median.     percentile_20: 20th percentile.     percentile_80: 80th percentile.
+Represents a statistic associated with a particular fuel and type of impact.  These statistics are computed are over the set of sample homes in the Monte Carlo simulation.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mean** | [**Quantity**](Quantity.md) |  | 
-**median** | [**Quantity**](Quantity.md) |  | 
-**percentile_20** | [**Quantity**](Quantity.md) |  | 
-**percentile_80** | [**Quantity**](Quantity.md) |  | 
+**mean** | [**Quantity**](Quantity.md) | The mean statistic. | 
+**median** | [**Quantity**](Quantity.md) | The median statistic. | 
+**percentile_20** | [**Quantity**](Quantity.md) | The 20th percentile statistic. | 
+**percentile_80** | [**Quantity**](Quantity.md) | The 80th percentile statistic. | 
 
 ## Example
 

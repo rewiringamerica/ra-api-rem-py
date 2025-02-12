@@ -4,17 +4,19 @@ Upgrades accepted by the REM API.
 
 ## Enum
 
-* `BASIC_ENCLOSURE` (value: `'basic_enclosure'`)
+* `BASELINE` (value: `'baseline'`)
 
-* `MIN_EFF_HP_ELEC_BACKUP` (value: `'min_eff_hp_elec_backup'`)
+* `WEATHERIZATION__INSULATION_AIR_DUCT_SEALING` (value: `'weatherization__insulation_air_duct_sealing'`)
 
-* `HIGH_EFF_HP_ELEC_BACKUP` (value: `'high_eff_hp_elec_backup'`)
+* `HVAC__HEAT_PUMP_SEER15_HSPF9` (value: `'hvac__heat_pump_seer15_hspf9'`)
 
-* `WHOLE_HOME_ELECTRIC_MAX_EFF_BASIC_ENCLOSURE` (value: `'whole_home_electric_max_eff_basic_enclosure'`)
+* `HVAC__HEAT_PUMP_SEER24_HSPF13` (value: `'hvac__heat_pump_seer24_hspf13'`)
 
-* `MED_EFF_HP_HERS_SIZING_NO_SETBACK` (value: `'med_eff_hp_hers_sizing_no_setback'`)
+* `COMBINATION__ALL_ELECTRIC__HVAC_SEER24_HSPF13__WEATHERIZATION` (value: `'combination__all_electric__hvac_seer24_hspf13__weatherization'`)
 
-* `MED_EFF_HP_HERS_SIZING_NO_SETBACK_BASIC_ENCLOSURE` (value: `'med_eff_hp_hers_sizing_no_setback_basic_enclosure'`)
+* `HVAC__HEAT_PUMP_SEER18_HSPF10` (value: `'hvac__heat_pump_seer18_hspf10'`)
+
+* `COMBINATION__HVAC_SEER18_HSPF10__WEATHERIZATION` (value: `'combination__hvac_seer18_hspf10__weatherization'`)
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

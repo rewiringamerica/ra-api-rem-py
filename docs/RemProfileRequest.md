@@ -1,14 +1,14 @@
 # RemProfileRequest
 
-A class representing the request body used to retrieve a building's profile.  Attributes ----------     upgrade: Building Upgrade     heating_fuel: Heating Fuel     building_profile: Building Profile
+A class representing the request body used to retrieve a building's profile.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**upgrade** | [**SupportedUpgrade**](SupportedUpgrade.md) |  | 
-**heating_fuel** | [**HeatingFuel**](HeatingFuel.md) |  | 
-**building_profile** | [**BuildingProfile**](BuildingProfile.md) |  | 
+**upgrade** | [**SupportedUpgrade**](SupportedUpgrade.md) | The upgrade whose effects we want to analyze. | 
+**heating_fuel** | [**HeatingFuel**](HeatingFuel.md) | The heating fuel used in the home before the upgrade. | 
+**building_profile** | [**BuildingProfile**](BuildingProfile.md) | The known geographic features and building characteristics for a given residence. | 
 
 ## Example
 
