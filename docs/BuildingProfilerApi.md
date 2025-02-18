@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 Get home profile
 
-Geocode an address and match against ATTOM data to find building features for a given residence.  This implementation takes in an address as a required query parameter and returns geographic characteristics and building features about the home if the input address is valid.
+Geocode an address and match against ATTOM data to find building features for a given residence.
 
 ### Example
 
