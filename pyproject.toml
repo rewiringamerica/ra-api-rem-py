@@ -5,7 +5,7 @@ description = "Residential Electrification Model API"
 authors = ["Rewiring America <datascience@rewiringamerica.org>"]
 license = "Apache 2.0"
 readme = "README.md"
-repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
+repository = "https://github.com/rewiringamerica/ra-api-rem-py"
 keywords = ["OpenAPI", "OpenAPI-Generator", "Residential Electrification Model API"]
 include = ["rewiringamerica_rem/py.typed"]
 
