@@ -1,0 +1,33 @@
+# Publish Python stubs to PyPi.
+
+name: Publish Python stubs
+
+# Prod deployments will automatically push the generated code to the repo
+on:
+  push
+
+jobs:
+  #----------------------------------------------
+  #               Publish stubs
+  #----------------------------------------------
+  publish-stubs:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Install Poetry
+          uses: snok/install-poetry@v1
+          with:
+            virtualenvs-create: false
+        - name: Install twine
+          run: pip install twine
+        - name: Create .pypirc
+          run: |
+            echo "hi"
+        - name: Build the package
+          run: |
+            poetry update
+            poetry build
+        - name: Publish the package
+          run: poetry run twine upload --repository testpypi dist/*
+
+
+
