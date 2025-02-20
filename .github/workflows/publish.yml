@@ -1,6 +1,6 @@
 # Publish Python stubs to PyPi.
 
-name: Publish Python stubs
+name: Publish stubs
 
 # Prod deployments will automatically generate code into the repo
 on:
@@ -25,18 +25,18 @@ jobs:
             python-version: 3.12
 
         - name: Install Poetry
-          uses: abatilo/actions-poetry@v2
+          run: |
+            curl -sSL https://install.python-poetry.org | python3 -
+            poetry --version  # Verify the installed Poetry version
+            poetry install
 
         - name: Install twine
           run: pip install twine
 
         - name: Build the package
           run: |
-            poetry update
-            poetry build
+            poetry build --verbose --no-interaction
+            ls -l dist
 
         - name: Publish the package
           run: poetry run twine upload --repository testpypi dist/*
-
-
-
