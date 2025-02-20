@@ -34,4 +34,4 @@ jobs:
           run: poetry build --verbose --no-interaction
 
         - name: Publish the package
-          run: poetry run twine upload --repository pypi dist/* --verbose --no-interaction
+          run: poetry run twine upload --repository pypi dist/* --verbose
