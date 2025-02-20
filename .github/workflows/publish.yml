@@ -24,19 +24,14 @@ jobs:
           with:
             python-version: 3.12
 
-        - name: Install Poetry
+        - name: Install Poetry and twine
           run: |
             curl -sSL https://install.python-poetry.org | python3 -
-            poetry --version  # Verify the installed Poetry version
             poetry install
-
-        - name: Install twine
-          run: pip install twine
+            pip install twine
 
         - name: Build the package
-          run: |
-            poetry build --verbose --no-interaction
-            ls -l dist
+          run: poetry build --verbose --no-interaction
 
         - name: Publish the package
-          run: poetry run twine upload --repository testpypi dist/*
+          run: poetry run twine upload --repository pypi dist/* --verbose --no-interaction
