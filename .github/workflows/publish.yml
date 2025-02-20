@@ -13,15 +13,16 @@ jobs:
   publish-stubs:
     runs-on: ubuntu-latest
     steps:
-        - name: Install Poetry
-          uses: snok/install-poetry@v1
+        - name: Checkout repo
+          uses: actions/checkout@v4
+        - name: Install Python
+          uses: actions/setup-python@v5
           with:
-            virtualenvs-create: false
+            python-version: 3.12
+        - name: Install Poetry
+          uses: abatilo/actions-poetry@v2
         - name: Install twine
           run: pip install twine
-        - name: Create .pypirc
-          run: |
-            echo "hi"
         - name: Build the package
           run: |
             poetry update
