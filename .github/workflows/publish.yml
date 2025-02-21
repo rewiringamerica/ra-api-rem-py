@@ -4,7 +4,9 @@ name: Publish stubs
 
 # Prod deployments will automatically generate code into the repo
 on:
-  push
+  push:
+    branches:
+      - main
 
 permissions:
   id-token: write
@@ -24,9 +26,11 @@ jobs:
           with:
             python-version: 3.12
 
-        - name: Install Poetry and twine
+        - name: Install Poetry
+          uses: abatilo/actions-poetry@v2
+
+        - name: Install dependencies
           run: |
-            curl -sSL https://install.python-poetry.org | python3 -
             poetry install
             pip install twine
 
