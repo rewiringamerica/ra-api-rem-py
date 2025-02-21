@@ -1,0 +1,41 @@
+# Publish Python stubs to PyPi.
+
+name: Publish stubs
+
+# Prod deployments will automatically generate code into the repo
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+
+jobs:
+  #----------------------------------------------
+  #               Publish stubs
+  #----------------------------------------------
+  publish-stubs:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout repo
+          uses: actions/checkout@v4
+
+        - name: Install Python
+          uses: actions/setup-python@v5
+          with:
+            python-version: 3.12
+
+        - name: Install Poetry
+          uses: abatilo/actions-poetry@v2
+
+        - name: Install dependencies
+          run: |
+            poetry install
+            pip install twine
+
+        - name: Build the package
+          run: poetry build --verbose --no-interaction
+
+        - name: Publish the package
+          run: poetry run twine upload --repository pypi dist/* --verbose
