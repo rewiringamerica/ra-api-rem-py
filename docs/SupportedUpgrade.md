@@ -12,6 +12,8 @@ Upgrades accepted by the REM API.
 
 * `HVAC__HEAT_PUMP_SEER24_HSPF13` (value: `'hvac__heat_pump_seer24_hspf13'`)
 
+* `WATER_HEATER__HEAT_PUMP_UEF3_DOT_35` (value: `'water_heater__heat_pump_uef3.35'`)
+
 * `COMBINATION__ALL_ELECTRIC__HVAC_SEER24_HSPF13__WEATHERIZATION` (value: `'combination__all_electric__hvac_seer24_hspf13__weatherization'`)
 
 * `HVAC__HEAT_PUMP_SEER18_HSPF10` (value: `'hvac__heat_pump_seer18_hspf10'`)

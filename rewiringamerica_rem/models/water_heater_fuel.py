@@ -19,9 +19,9 @@ from enum import Enum
 from typing_extensions import Self
 
 
-class HeatingFuel(str, Enum):
+class WaterHeaterFuel(str, Enum):
     """
-    Heating fuels supported by the API.  Note that we do not currently support \"Other Fuel\" or \"None\".
+    Water heater fuel options.  Note that we do not currently support \"Other Fuel\".
     """
 
     """
@@ -34,7 +34,7 @@ class HeatingFuel(str, Enum):
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
-        """Create an instance of HeatingFuel from a JSON string"""
+        """Create an instance of WaterHeaterFuel from a JSON string"""
         return cls(json.loads(json_str))
 
 

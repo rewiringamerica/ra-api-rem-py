@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **upgrade** | [**SupportedUpgrade**](SupportedUpgrade.md) | The upgrade whose effects we want to analyze. | 
 **heating_fuel** | [**HeatingFuel**](HeatingFuel.md) | The heating fuel used in the home before the upgrade. | 
+**water_heater_fuel** | [**WaterHeaterFuel**](WaterHeaterFuel.md) |  | [optional] 
 **building_profile** | [**BuildingProfile**](BuildingProfile.md) | The known geographic features and building characteristics for a given residence. | 
 
 ## Example

@@ -15,10 +15,10 @@
 
 import unittest
 
-from rewiringamerica_rem.models.validation_error import ValidationError
+from rewiringamerica_rem.models.sampling_details import SamplingDetails
 
-class TestValidationError(unittest.TestCase):
-    """ValidationError unit test stubs"""
+class TestSamplingDetails(unittest.TestCase):
+    """SamplingDetails unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,34 +26,28 @@ class TestValidationError(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> ValidationError:
-        """Test ValidationError
+    def make_instance(self, include_optional) -> SamplingDetails:
+        """Test SamplingDetails
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `ValidationError`
+        # uncomment below to create an instance of `SamplingDetails`
         """
-        model = ValidationError()
+        model = SamplingDetails()
         if include_optional:
-            return ValidationError(
-                loc = [
-                    null
-                    ],
-                msg = '',
-                type = ''
+            return SamplingDetails(
+                num_samples = 56,
+                num_excluded_samples = 56
             )
         else:
-            return ValidationError(
-                loc = [
-                    null
-                    ],
-                msg = '',
-                type = '',
+            return SamplingDetails(
+                num_samples = 56,
+                num_excluded_samples = 56,
         )
         """
 
-    def testValidationError(self):
-        """Test ValidationError"""
+    def testSamplingDetails(self):
+        """Test SamplingDetails"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

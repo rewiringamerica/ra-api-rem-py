@@ -15,10 +15,10 @@
 
 import unittest
 
-from rewiringamerica_rem.models.heating_fuel import HeatingFuel
+from rewiringamerica_rem.models.water_heater_fuel import WaterHeaterFuel
 
-class TestHeatingFuel(unittest.TestCase):
-    """HeatingFuel unit test stubs"""
+class TestWaterHeaterFuel(unittest.TestCase):
+    """WaterHeaterFuel unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,9 +26,9 @@ class TestHeatingFuel(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testHeatingFuel(self):
-        """Test HeatingFuel"""
-        # inst = HeatingFuel()
+    def testWaterHeaterFuel(self):
+        """Test WaterHeaterFuel"""
+        # inst = WaterHeaterFuel()
 
 if __name__ == '__main__':
     unittest.main()

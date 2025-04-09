@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **geometry_building_number_units_sfa** | **float** | The number of units in a single-family attached building. | [optional] 
 **geometry_building_number_units_mf** | **float** | The number of units in a multifamily building. | [optional] 
 **heating_fuel** | **List[str]** | The primary fuel used for heating the residence. | [optional] 
+**water_heater_fuel** | **List[str]** | The fuel used by the water heater in the residence. | [optional] 
 
 ## Example
 

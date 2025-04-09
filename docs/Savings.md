@@ -1,14 +1,15 @@
 # Savings
 
-Represents the impacts of an upgrade and the rates and emissions factors used to compute these impacts.
+Represents the impacts of an upgrade and additional details on how these were computed.  Additional details include the rates, emissions factors and number of samples used to compute the impacts.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fuel_results** | [**Dict[str, FuelSavings]**](FuelSavings.md) | A list of results, one for each fuel type. | 
-**rates** | **Dict[str, List[FuelRate]]** | A list of rates used to compute the cost of consuming each fuel. | 
-**emissions_factors** | [**Dict[str, Quantity]**](Quantity.md) | A list of conversion factors used to compute the emissions from each fuel. | 
+**fuel_results** | [**Dict[str, FuelSavings]**](FuelSavings.md) | A dictionary of results, one for each fuel type. | 
+**rates** | **Dict[str, List[FuelRate]]** | A dictionary of rates used to compute the cost of consuming each fuel. | 
+**emissions_factors** | [**Dict[str, Quantity]**](Quantity.md) | A dictionary of conversion factors used to compute the emissions from each fuel. | 
+**sampling_details** | [**SamplingDetails**](SamplingDetails.md) | A dictionary describing the number of samples used in the model. | 
 
 ## Example
 

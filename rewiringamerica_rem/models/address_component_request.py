@@ -18,20 +18,24 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
-from typing import Any, ClassVar, Dict, List
-from rewiringamerica_rem.models.metric_statistics import MetricStatistics
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Union
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ImpactMetric(BaseModel):
+class AddressComponentRequest(BaseModel):
     """
-    Represents a collection of impacts associated with a fuel.
+    A class representing the request body to retrieve a building profile by address components.
     """ # noqa: E501
-    energy: MetricStatistics = Field(description="The energy consumed for the given fuel.")
-    emissions: MetricStatistics = Field(description="The emissions produced by the given fuel.")
-    cost: MetricStatistics = Field(description="The cost of consumed the given fuel.")
-    __properties: ClassVar[List[str]] = ["energy", "emissions", "cost"]
+    full_address: StrictStr = Field(description="The full mailing address of the home.")
+    street_number: StrictStr = Field(description="The street number in the home's mailing address.")
+    street_name: StrictStr = Field(description="The all-caps street name in the home's mailing address including directions that may occur             before or after the name and the abbreviate street type like ST or BLVD")
+    city: StrictStr = Field(description="The all-caps city in the home's mailing address.")
+    state_abbr: StrictStr = Field(description="The two-letter state abbreviation of the state in the home's mailing address.")
+    zip: StrictStr = Field(description="The five digit zip code in the home's mailing address.")
+    latitude: Union[StrictFloat, StrictInt] = Field(description="The geocoded latitude of the home's location, specified to at least             5 significant digits after the decimal.")
+    longitude: Union[StrictFloat, StrictInt] = Field(description="The geocoded longitude of the home's location, specified to at least             5 significant digits after the decimal.")
+    __properties: ClassVar[List[str]] = ["full_address", "street_number", "street_name", "city", "state_abbr", "zip", "latitude", "longitude"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -51,7 +55,7 @@ class ImpactMetric(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ImpactMetric from a JSON string"""
+        """Create an instance of AddressComponentRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -72,20 +76,11 @@ class ImpactMetric(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of energy
-        if self.energy:
-            _dict['energy'] = self.energy.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of emissions
-        if self.emissions:
-            _dict['emissions'] = self.emissions.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of cost
-        if self.cost:
-            _dict['cost'] = self.cost.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ImpactMetric from a dict"""
+        """Create an instance of AddressComponentRequest from a dict"""
         if obj is None:
             return None
 
@@ -93,9 +88,14 @@ class ImpactMetric(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "energy": MetricStatistics.from_dict(obj["energy"]) if obj.get("energy") is not None else None,
-            "emissions": MetricStatistics.from_dict(obj["emissions"]) if obj.get("emissions") is not None else None,
-            "cost": MetricStatistics.from_dict(obj["cost"]) if obj.get("cost") is not None else None
+            "full_address": obj.get("full_address"),
+            "street_number": obj.get("street_number"),
+            "street_name": obj.get("street_name"),
+            "city": obj.get("city"),
+            "state_abbr": obj.get("state_abbr"),
+            "zip": obj.get("zip"),
+            "latitude": obj.get("latitude"),
+            "longitude": obj.get("longitude")
         })
         return _obj
 

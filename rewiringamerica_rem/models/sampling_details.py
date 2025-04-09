@@ -18,20 +18,18 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List
-from rewiringamerica_rem.models.metric_statistics import MetricStatistics
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ImpactMetric(BaseModel):
+class SamplingDetails(BaseModel):
     """
-    Represents a collection of impacts associated with a fuel.
+    Details on the samples used in the model.
     """ # noqa: E501
-    energy: MetricStatistics = Field(description="The energy consumed for the given fuel.")
-    emissions: MetricStatistics = Field(description="The emissions produced by the given fuel.")
-    cost: MetricStatistics = Field(description="The cost of consumed the given fuel.")
-    __properties: ClassVar[List[str]] = ["energy", "emissions", "cost"]
+    num_samples: StrictInt = Field(description="The number of samples used to compute the statistics.")
+    num_excluded_samples: StrictInt = Field(description="The number of samples that matched the building profile but for which the chosen upgradewas not applicable, and were therefore excluded when computing the statistics.")
+    __properties: ClassVar[List[str]] = ["num_samples", "num_excluded_samples"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -51,7 +49,7 @@ class ImpactMetric(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ImpactMetric from a JSON string"""
+        """Create an instance of SamplingDetails from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -72,20 +70,11 @@ class ImpactMetric(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of energy
-        if self.energy:
-            _dict['energy'] = self.energy.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of emissions
-        if self.emissions:
-            _dict['emissions'] = self.emissions.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of cost
-        if self.cost:
-            _dict['cost'] = self.cost.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ImpactMetric from a dict"""
+        """Create an instance of SamplingDetails from a dict"""
         if obj is None:
             return None
 
@@ -93,9 +82,8 @@ class ImpactMetric(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "energy": MetricStatistics.from_dict(obj["energy"]) if obj.get("energy") is not None else None,
-            "emissions": MetricStatistics.from_dict(obj["emissions"]) if obj.get("emissions") is not None else None,
-            "cost": MetricStatistics.from_dict(obj["cost"]) if obj.get("cost") is not None else None
+            "num_samples": obj.get("num_samples"),
+            "num_excluded_samples": obj.get("num_excluded_samples")
         })
         return _obj
 

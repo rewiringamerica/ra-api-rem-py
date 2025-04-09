@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **ashrae_iecc_climate_zone_2004** | **str** | The IECC Climate Zone where a residence is located. | 
 **weather_file_city** | **str** | The location of the ResStock Weather File used for the area where the residence is located. | 
 **state** | **str** | The 2 letter postal code of the state where the residence is located. | 
-**building_features** | [**BuildingFeatures**](BuildingFeatures.md) | The building characteristics found for the residence. See BuildingFeatures documentation for full details about possible characteristics and their meanings. | [optional] 
+**building_features** | [**BuildingFeatures**](BuildingFeatures.md) | The building characteristics found for the residence. See BuildingFeatures documentation for full details about possible characteristics and their meanings. | 
 
 ## Example
 
